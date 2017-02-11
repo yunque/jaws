@@ -18,6 +18,16 @@ def new_bucket():
 
   # Set the Access Control List (public => no permissions required)
   key.set_acl('public-read')
+  
+def move_file():
+  ''' Move a file to another domain (copy & delete) '''
+  s3 = boto.connect_s3()
+  key = s3.get_bucket('domain.com').get_key('test/test_1.csv')
+  
+  # Copy & delete (if copy successful)
+  new_key = key.copy('domain2.com', 'test/test_1.wav')
+  if new_key.exists:
+	  key.delete()
 
 if __name__ == '__main__':
   new_bucket()
