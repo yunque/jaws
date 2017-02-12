@@ -15,8 +15,10 @@
 [3]: http://blog.learningtree.com/understanding-amazon-ec2-security-groups-and-firewalls/ " "
 
 **Systems**  
-[~ S3 + SQS + EC2][5]
+[~ S3 + SQS + EC2][5]  
+[S3 + Lambda][9]
 [5]: https://aws.amazon.com/articles/3998
+[9]: docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html
 
 **boto**  
 [Migrating from boto 2.x to boto3][7]  
