@@ -1,0 +1,36 @@
+Type: "AWS::IAM::Policy"
+Properties:
+   # Full permissions for root
+   PolicyName: "root"
+   PolicyDocument:
+      Version: "2017-02-12"
+      Statement:
+      -
+         Effect: "Allow"
+         Action: "s3:*"
+         Resource: "arn:aws:s3:::bucket_test/*"
+   Roles:
+      -
+         Ref: "RootRole"
+         
+   # Allow user to PutObject into their own folder on S3,
+   # Deny user to do anything else other than PutObject
+   PolicyName: "user"
+   PolicyDocument:
+      Version: "2017-02-12"
+      Statement:
+      -
+         Effect: "Allow"
+         Action: "s3:PutObject"
+         Resource: "arn:aws:s3:::bucket_test/uploads/username/*"
+      -
+         Effect: "Deny"
+         NotAction: "s3:PutObject"
+         Resource: "arn:aws:s3:::bucket_test/uploads/username/*"
+      -
+         Effect: "Deny"
+         Action: "s3:*"
+         Resource: "arn:aws:s3:::bucket_test/uploads/username/*"
+   Roles:
+      -
+         Ref: "UserRole"
