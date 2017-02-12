@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-import boto3
+import boto
+from boto.s3.connection import Location
 
 def new_bucket():
   # Connect to S3 and create a new bucket with a unique name
   s3 = boto.connect_s3()
-  bucket_uuid = s3.create_bucket('domain.com')
+  bucket_uuid = s3.create_bucket('domain.com', location=Location.EU)
 
   # Create a key in which to store the data
   # Returns a new 'key' object, but nothing happens on S3 yet
