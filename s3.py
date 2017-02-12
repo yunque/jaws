@@ -16,8 +16,8 @@ def new_bucket():
   # ...into the 'key' object on S3.
   key.set_contents_from_filename('/home/test/test_1.wav')
 
-  # Set the Access Control List (public => no permissions required)
-  key.set_acl('public-read')
+  # Set the Access Control List (private, public-read, public-read-write)
+  key.set_acl('private')
   
 def move_file():
   ''' Move a file to another domain (copy & delete) '''
