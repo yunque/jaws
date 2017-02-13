@@ -39,6 +39,13 @@ def set_access_controls(bucket):
 	# Add grantee
 	bucket.Acl.put(GrantRead='emailAddress=yunque@github.com')
 	
+
+def delete_bucket():
+	# Empty the bucket and delete it
+	for key in bucket.objects.all():
+		key.delete()
+	bucket.delete()	
+
 	
 def get_metadata(username, timestamp, location, notes):
 	''' Package metadata i.o.t. include with data when storing as object in S3 '''
