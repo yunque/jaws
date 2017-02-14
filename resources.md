@@ -17,8 +17,10 @@
 **Lambda**  
 [Using Scikit-Learn In AWS Lambda (build with ansible and boto)][10]  
 [5 things you should know before using Lambda][11]  
+[AWS Lambda Container Lifetime and Config Refresh][12]  
 [10]: https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/
 [11]: https://blog.axilis.com/5-things-you-should-know-before-using-lambda-bf4cf1c9d917#.boz1ihrrs
+[12]: https://www.linkedin.com/pulse/aws-lambda-container-lifetime-config-refresh-frederik-willaert
 
 **Systems**  
 [~ S3 + SQS + EC2][5]  
