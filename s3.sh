@@ -20,7 +20,7 @@ rm ./file.txt
 # Attempt sync without --delete option - nothing happens
 aws s3 sync . s3://bucket-test/path
 # Sync with deletion - object is deleted from bucket
-aws s3 sync . s3://my-bucket/path --delete
+aws s3 sync . s3://bucket-test/path --delete
 
 # # Delete an object from bucket and sync local directory
 # Delete object from bucket
