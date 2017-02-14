@@ -58,10 +58,7 @@ def get_metadata(username, timestamp, location, notes):
 	return metadata
 
 
-def store_data(s3, bucket_name, src, dst):
-	# Metadata
-	metadata = get_metadata()
-
+def store_data(s3, bucket_name, src, dst, metadata):
 	# Store data, c.f. https://github.com/boto/boto3/issues/372
 	s3.Object(bucket_name, dst).put(Body=open(src, 'rb'), Metadata=metadata)
 
@@ -78,8 +75,8 @@ if __name__ == '__main__':
 	
 	# Add metadata about user's upload
 	timestamp = str(datetime.now())
-	get_metadata(username, timestamp, 'Neither here nor there', 'Cool in the pool')
+	metadata = get_metadata(username, timestamp, 'Neither here nor there', 'Cool in the pool')
 
 	# Store a local file in the bucket
 	# XXX: won't be necessary in final deployment
-	store_data(s3, 'bucket_test', '/local/path/to/test_1.wav', 'test_1.wav')
+	store_data(s3, 'bucket_test', '/local/path/to/test_1.wav', 'test_1.wav', metadata)
