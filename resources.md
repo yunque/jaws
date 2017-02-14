@@ -15,8 +15,10 @@
 [3]: http://blog.learningtree.com/understanding-amazon-ec2-security-groups-and-firewalls/ " "
 
 **Lambda**  
-[Using Scikit-Learn In AWS Lambda (build with ansible and boto)][10]
+[Using Scikit-Learn In AWS Lambda (build with ansible and boto)][10]  
+[5 things you should know before using Lambda][11]  
 [10]: https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/
+[11]: https://blog.axilis.com/5-things-you-should-know-before-using-lambda-bf4cf1c9d917#.boz1ihrrs
 
 **Systems**  
 [~ S3 + SQS + EC2][5]  
