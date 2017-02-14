@@ -30,4 +30,4 @@ def handler(event, context):
         
         s3.download_file(bucket, key, download_path)
         params = audio_params(download_path)
-        s3.upload_file(N, key)
+        s3.upload_file(params, key)
