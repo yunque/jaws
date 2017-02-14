@@ -14,6 +14,10 @@
 [2]: http://docs.aws.amazon.com/cli/latest/userguide/cli-ec2-sg.html " "
 [3]: http://blog.learningtree.com/understanding-amazon-ec2-security-groups-and-firewalls/ " "
 
+**Lambda**  
+[Using Scikit-Learn In AWS Lambda (build with ansible and boto)][10]
+[10]: https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/
+
 **Systems**  
 [~ S3 + SQS + EC2][5]  
 [S3 + Lambda][9]
