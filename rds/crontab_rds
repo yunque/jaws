@@ -1,0 +1,6 @@
+# Add to /etc/crontab
+#
+# Put RDS instance to sleep at 1AM, and wake it up at 7AM, every day
+
+0 1     * * *   root    <path/to/jaws>/rds_sleep.sh >> <path/to/jaws>/rds_sleep.log
+0 7     * * *   root    <path/to/jaws>/rds_wakeup.sh >> <path/to/jaws>/rds_wakeup.log
